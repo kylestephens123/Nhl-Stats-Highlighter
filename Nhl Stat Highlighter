@@ -1,0 +1,557 @@
+Sub NhlStatsHighlighter()
+
+Worksheets("Main Page").Activate
+
+
+'this next command highlights stats that are positive or negative
+
+   For Each cell In ActiveSheet.UsedRange.Cells
+        
+            If IsNumeric(cell) And Not IsEmpty(cell) Then
+                    If cell.Value < 0 Then
+                    cell.Interior.Color = rgbRed
+        
+                    ElseIf cell.Value = 0 Then
+                    cell.Interior.Color = rgbGray
+        
+                    ElseIf cell.Value > 0 Then
+                    cell.Interior.Color = rgbLightBlue
+        
+                    End If
+            End If
+    Next
+    
+    
+    'this next command highlights team colors
+    
+    For Each cell In ActiveSheet.UsedRange.Cells
+    
+        If cell.Value = "ANA" Then
+        cell.Interior.Color = rgbAqua
+        
+        ElseIf cell.Value = "ARI" Then
+        cell.Interior.Color = vbRed
+        
+        ElseIf cell.Value = "BOS" Then
+        cell.Interior.Color = rgbGold
+        
+        ElseIf cell.Value = "BUF" Then
+        cell.Interior.Color = rgbLightBlue
+        
+        ElseIf cell.Value = "CAR" Then
+        cell.Interior.Color = rgbFireBrick
+        
+        ElseIf cell.Value = "CGY" Then
+        cell.Interior.Color = rgbDarkRed
+        
+            If cell.Value = "CGY" Then
+            cell.Font.Color = vbWhite
+            
+            End If
+            
+        ElseIf cell.Value = "CHI" Then
+        cell.Interior.Color = rgbMaroon
+        
+        ElseIf cell.Value = "COL" Then
+        cell.Interior.Color = rgbTeal
+        
+        ElseIf cell.Value = "CBJ" Then
+        cell.Interior.Color = rgbDarkBlue
+        
+            If cell.Value = "CBJ" Then
+            cell.Font.Color = vbWhite
+        
+            End If
+        
+        ElseIf cell.Value = "DAL" Then
+        cell.Interior.Color = rgbGreen
+        
+        ElseIf cell.Value = "DET" Then
+        cell.Interior.Color = rgbSalmon
+        
+        ElseIf cell.Value = "EDM" Then
+        cell.Interior.Color = rgbOrange
+        
+        ElseIf cell.Value = "FLA" Then
+        cell.Interior.Color = rgbGoldenrod
+        
+        ElseIf cell.Value = "LAK" Then
+        cell.Interior.Color = rgbPurple
+        
+        ElseIf cell.Value = "MIN" Then
+        cell.Interior.Color = rgbDarkGreen
+        
+        ElseIf cell.Value = "MTL" Then
+        cell.Interior.Color = rgbLightSalmon
+        
+        ElseIf cell.Value = "NSH" Then
+        cell.Interior.Color = rgbYellow
+        
+        ElseIf cell.Value = "NJD" Then
+        cell.Interior.Color = rgbDarkMagenta
+        
+        ElseIf cell.Value = "NYI" Then
+        cell.Interior.Color = rgbBlanchedAlmond
+        
+        ElseIf cell.Value = "NYR" Then
+        cell.Interior.Color = rgbSkyBlue
+        
+        ElseIf cell.Value = "PHI" Then
+        cell.Interior.Color = rgbTan
+        
+        ElseIf cell.Value = "PIT" Then
+        cell.Interior.Color = rgbGray
+        
+        ElseIf cell.Value = "OTT" Then
+        cell.Interior.Color = rgbCoral
+        
+        ElseIf cell.Value = "SJS" Then
+        cell.Interior.Color = rgbDarkCyan
+        
+        ElseIf cell.Value = "STL" Then
+        cell.Interior.Color = rgbAzure
+        
+        ElseIf cell.Value = "TBL" Then
+        cell.Interior.Color = rgbLightSkyBlue
+        
+        ElseIf cell.Value = "TOR" Then
+        cell.Interior.Color = rgbCadetBlue
+        
+        ElseIf cell.Value = "VAN" Then
+        cell.Interior.Color = rgbDeepSkyBlue
+        
+        ElseIf cell.Value = "WSH" Then
+        cell.Interior.Color = rgbPaleVioletRed
+        
+        ElseIf cell.Value = "WPG" Then
+        cell.Interior.Color = rgbAqua
+        
+        
+        
+        End If
+        
+    Next
+    
+Worksheets("Even Strength").Activate
+
+
+'this next command highlights stats that are positive or negative
+
+   For Each cell In ActiveSheet.UsedRange.Cells
+        
+            If IsNumeric(cell) And Not IsEmpty(cell) Then
+                    If cell.Value < 0 Then
+                    cell.Interior.Color = rgbRed
+        
+                    ElseIf cell.Value = 0 Then
+                    cell.Interior.Color = rgbGray
+        
+                    ElseIf cell.Value > 0 Then
+                    cell.Interior.Color = rgbLightBlue
+        
+                    End If
+            End If
+    Next
+    
+      
+      
+      For Each cell In ActiveSheet.UsedRange.Cells
+    
+    
+        If cell.Value = "ANA" Then
+        cell.Interior.Color = rgbAqua
+        
+        ElseIf cell.Value = "ARI" Then
+        cell.Interior.Color = vbRed
+        
+        ElseIf cell.Value = "BOS" Then
+        cell.Interior.Color = rgbGold
+        
+        ElseIf cell.Value = "BUF" Then
+        cell.Interior.Color = rgbLightBlue
+        
+        ElseIf cell.Value = "CAR" Then
+        cell.Interior.Color = rgbFireBrick
+        
+        ElseIf cell.Value = "CGY" Then
+        cell.Interior.Color = rgbDarkRed
+        
+            If cell.Value = "CGY" Then
+            cell.Font.Color = vbWhite
+            
+            End If
+            
+        ElseIf cell.Value = "CHI" Then
+        cell.Interior.Color = rgbMaroon
+        
+        ElseIf cell.Value = "COL" Then
+        cell.Interior.Color = rgbTeal
+        
+        ElseIf cell.Value = "CBJ" Then
+        cell.Interior.Color = rgbDarkBlue
+        
+            If cell.Value = "CBJ" Then
+            cell.Font.Color = vbWhite
+        
+            End If
+        
+        ElseIf cell.Value = "DAL" Then
+        cell.Interior.Color = rgbGreen
+        
+        ElseIf cell.Value = "DET" Then
+        cell.Interior.Color = rgbSalmon
+        
+        ElseIf cell.Value = "EDM" Then
+        cell.Interior.Color = rgbOrange
+        
+        ElseIf cell.Value = "FLA" Then
+        cell.Interior.Color = rgbGoldenrod
+        
+        ElseIf cell.Value = "LAK" Then
+        cell.Interior.Color = rgbPurple
+        
+        ElseIf cell.Value = "MIN" Then
+        cell.Interior.Color = rgbDarkGreen
+        
+        ElseIf cell.Value = "MTL" Then
+        cell.Interior.Color = rgbLightSalmon
+        
+        ElseIf cell.Value = "NSH" Then
+        cell.Interior.Color = rgbYellow
+        
+        ElseIf cell.Value = "NJD" Then
+        cell.Interior.Color = rgbDarkMagenta
+        
+        ElseIf cell.Value = "NYI" Then
+        cell.Interior.Color = rgbBlanchedAlmond
+        
+        ElseIf cell.Value = "NYR" Then
+        cell.Interior.Color = rgbSkyBlue
+        
+        ElseIf cell.Value = "PHI" Then
+        cell.Interior.Color = rgbTan
+        
+        ElseIf cell.Value = "PIT" Then
+        cell.Interior.Color = rgbGray
+        
+        ElseIf cell.Value = "OTT" Then
+        cell.Interior.Color = rgbCoral
+        
+        ElseIf cell.Value = "SJS" Then
+        cell.Interior.Color = rgbDarkCyan
+        
+        ElseIf cell.Value = "STL" Then
+        cell.Interior.Color = rgbAzure
+        
+        ElseIf cell.Value = "TBL" Then
+        cell.Interior.Color = rgbLightSkyBlue
+        
+        ElseIf cell.Value = "TOR" Then
+        cell.Interior.Color = rgbCadetBlue
+        
+        ElseIf cell.Value = "VAN" Then
+        cell.Interior.Color = rgbDeepSkyBlue
+        
+        ElseIf cell.Value = "WSH" Then
+        cell.Interior.Color = rgbPaleVioletRed
+        
+        ElseIf cell.Value = "WPG" Then
+        cell.Interior.Color = rgbAqua
+        
+        
+        
+        End If
+        
+    Next
+
+    
+
+Worksheets("Power Play").Activate
+
+
+'this next command highlights stats that are positive or negative
+
+   For Each cell In ActiveSheet.UsedRange.Cells
+        
+            If IsNumeric(cell) And Not IsEmpty(cell) Then
+                    If cell.Value < 0 Then
+                    cell.Interior.Color = rgbRed
+        
+                    ElseIf cell.Value = 0 Then
+                    cell.Interior.Color = rgbGray
+        
+                    ElseIf cell.Value > 0 Then
+                    cell.Interior.Color = rgbLightBlue
+        
+                    End If
+            End If
+    Next
+    
+      
+      
+      
+Worksheets("Penalty Kill").Activate
+
+
+'this next command highlights stats that are positive or negative
+
+   For Each cell In ActiveSheet.UsedRange.Cells
+        
+            If IsNumeric(cell) And Not IsEmpty(cell) Then
+                    If cell.Value < 0 Then
+                    cell.Interior.Color = rgbRed
+        
+                    ElseIf cell.Value = 0 Then
+                    cell.Interior.Color = rgbGray
+        
+                    ElseIf cell.Value > 0 Then
+                    cell.Interior.Color = rgbLightBlue
+        
+                    End If
+            End If
+    Next
+    
+    
+    'this next command highlights team colors
+    
+    For Each cell In ActiveSheet.UsedRange.Cells
+    
+        If cell.Value = "ANA" Then
+        cell.Interior.Color = rgbAqua
+        
+        ElseIf cell.Value = "ARI" Then
+        cell.Interior.Color = vbRed
+        
+        ElseIf cell.Value = "BOS" Then
+        cell.Interior.Color = rgbGold
+        
+        ElseIf cell.Value = "BUF" Then
+        cell.Interior.Color = rgbLightBlue
+        
+        ElseIf cell.Value = "CAR" Then
+        cell.Interior.Color = rgbFireBrick
+        
+        ElseIf cell.Value = "CGY" Then
+        cell.Interior.Color = rgbDarkRed
+        
+            If cell.Value = "CGY" Then
+            cell.Font.Color = vbWhite
+            
+            End If
+            
+        ElseIf cell.Value = "CHI" Then
+        cell.Interior.Color = rgbMaroon
+        
+        ElseIf cell.Value = "COL" Then
+        cell.Interior.Color = rgbTeal
+        
+        ElseIf cell.Value = "CBJ" Then
+        cell.Interior.Color = rgbDarkBlue
+        
+            If cell.Value = "CBJ" Then
+            cell.Font.Color = vbWhite
+        
+            End If
+        
+        ElseIf cell.Value = "DAL" Then
+        cell.Interior.Color = rgbGreen
+        
+        ElseIf cell.Value = "DET" Then
+        cell.Interior.Color = rgbSalmon
+        
+        ElseIf cell.Value = "EDM" Then
+        cell.Interior.Color = rgbOrange
+        
+        ElseIf cell.Value = "FLA" Then
+        cell.Interior.Color = rgbGoldenrod
+        
+        ElseIf cell.Value = "LAK" Then
+        cell.Interior.Color = rgbPurple
+        
+        ElseIf cell.Value = "MIN" Then
+        cell.Interior.Color = rgbDarkGreen
+        
+        ElseIf cell.Value = "MTL" Then
+        cell.Interior.Color = rgbLightSalmon
+        
+        ElseIf cell.Value = "NSH" Then
+        cell.Interior.Color = rgbYellow
+        
+        ElseIf cell.Value = "NJD" Then
+        cell.Interior.Color = rgbDarkMagenta
+        
+        ElseIf cell.Value = "NYI" Then
+        cell.Interior.Color = rgbBlanchedAlmond
+        
+        ElseIf cell.Value = "NYR" Then
+        cell.Interior.Color = rgbSkyBlue
+        
+        ElseIf cell.Value = "PHI" Then
+        cell.Interior.Color = rgbTan
+        
+        ElseIf cell.Value = "PIT" Then
+        cell.Interior.Color = rgbGray
+        
+        ElseIf cell.Value = "OTT" Then
+        cell.Interior.Color = rgbCoral
+        
+        ElseIf cell.Value = "SJS" Then
+        cell.Interior.Color = rgbDarkCyan
+        
+        ElseIf cell.Value = "STL" Then
+        cell.Interior.Color = rgbAzure
+        
+        ElseIf cell.Value = "TBL" Then
+        cell.Interior.Color = rgbLightSkyBlue
+        
+        ElseIf cell.Value = "TOR" Then
+        cell.Interior.Color = rgbCadetBlue
+        
+        ElseIf cell.Value = "VAN" Then
+        cell.Interior.Color = rgbDeepSkyBlue
+        
+        ElseIf cell.Value = "WSH" Then
+        cell.Interior.Color = rgbPaleVioletRed
+        
+        ElseIf cell.Value = "WPG" Then
+        cell.Interior.Color = rgbAqua
+        
+        
+        
+        End If
+        
+    Next
+    
+Worksheets("Home Road").Activate
+
+
+'this next command highlights stats that are positive or negative
+
+   For Each cell In ActiveSheet.UsedRange.Cells
+        
+            If IsNumeric(cell) And Not IsEmpty(cell) Then
+                    If cell.Value < 0 Then
+                    cell.Interior.Color = rgbRed
+        
+                    ElseIf cell.Value = 0 Then
+                    cell.Interior.Color = rgbGray
+        
+                    ElseIf cell.Value > 0 Then
+                    cell.Interior.Color = rgbLightBlue
+        
+                    End If
+            End If
+    Next
+    
+    
+    'this next command highlights team colors
+    
+    For Each cell In ActiveSheet.UsedRange.Cells
+    
+        If cell.Value = "ANA" Then
+        cell.Interior.Color = rgbAqua
+        
+        ElseIf cell.Value = "ARI" Then
+        cell.Interior.Color = vbRed
+        
+        ElseIf cell.Value = "BOS" Then
+        cell.Interior.Color = rgbGold
+        
+        ElseIf cell.Value = "BUF" Then
+        cell.Interior.Color = rgbLightBlue
+        
+        ElseIf cell.Value = "CAR" Then
+        cell.Interior.Color = rgbFireBrick
+        
+        ElseIf cell.Value = "CGY" Then
+        cell.Interior.Color = rgbDarkRed
+        
+            If cell.Value = "CGY" Then
+            cell.Font.Color = vbWhite
+            
+            End If
+            
+        ElseIf cell.Value = "CHI" Then
+        cell.Interior.Color = rgbMaroon
+        
+        ElseIf cell.Value = "COL" Then
+        cell.Interior.Color = rgbTeal
+        
+        ElseIf cell.Value = "CBJ" Then
+        cell.Interior.Color = rgbDarkBlue
+        
+            If cell.Value = "CBJ" Then
+            cell.Font.Color = vbWhite
+        
+            End If
+        
+        ElseIf cell.Value = "DAL" Then
+        cell.Interior.Color = rgbGreen
+        
+        ElseIf cell.Value = "DET" Then
+        cell.Interior.Color = rgbSalmon
+        
+        ElseIf cell.Value = "EDM" Then
+        cell.Interior.Color = rgbOrange
+        
+        ElseIf cell.Value = "FLA" Then
+        cell.Interior.Color = rgbGoldenrod
+        
+        ElseIf cell.Value = "LAK" Then
+        cell.Interior.Color = rgbPurple
+        
+        ElseIf cell.Value = "MIN" Then
+        cell.Interior.Color = rgbDarkGreen
+        
+        ElseIf cell.Value = "MTL" Then
+        cell.Interior.Color = rgbLightSalmon
+        
+        ElseIf cell.Value = "NSH" Then
+        cell.Interior.Color = rgbYellow
+        
+        ElseIf cell.Value = "NJD" Then
+        cell.Interior.Color = rgbDarkMagenta
+        
+        ElseIf cell.Value = "NYI" Then
+        cell.Interior.Color = rgbBlanchedAlmond
+        
+        ElseIf cell.Value = "NYR" Then
+        cell.Interior.Color = rgbSkyBlue
+        
+        ElseIf cell.Value = "PHI" Then
+        cell.Interior.Color = rgbTan
+        
+        ElseIf cell.Value = "PIT" Then
+        cell.Interior.Color = rgbGray
+        
+        ElseIf cell.Value = "OTT" Then
+        cell.Interior.Color = rgbCoral
+        
+        ElseIf cell.Value = "SJS" Then
+        cell.Interior.Color = rgbDarkCyan
+        
+        ElseIf cell.Value = "STL" Then
+        cell.Interior.Color = rgbAzure
+        
+        ElseIf cell.Value = "TBL" Then
+        cell.Interior.Color = rgbLightSkyBlue
+        
+        ElseIf cell.Value = "TOR" Then
+        cell.Interior.Color = rgbCadetBlue
+        
+        ElseIf cell.Value = "VAN" Then
+        cell.Interior.Color = rgbDeepSkyBlue
+        
+        ElseIf cell.Value = "WSH" Then
+        cell.Interior.Color = rgbPaleVioletRed
+        
+        ElseIf cell.Value = "WPG" Then
+        cell.Interior.Color = rgbAqua
+        
+        
+        
+        End If
+        
+    Next
+End Sub
+
